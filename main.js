@@ -15,6 +15,9 @@ Loadjson("data.json",function(text){
   console.log(data);
   basics(data.details);
   career(data.career);
+  education(data.education);
+  keyskills(data.keyskills);
+  achievements(data.achievements);
 })
 
 var child1 = document.querySelector(".child1");
@@ -64,4 +67,84 @@ function career(det){
   var career=document.createElement("h3");
   career.textContent=det.info;
   child2.appendChild(career);
+
+
+}
+
+function education(edu){
+
+  var ed = document.createElement("h2");
+  ed.textContent="Educational qualifications:";
+  child2.appendChild(ed);
+  for(i=0;i<edu.length;i++)
+  {
+    var degree=document.createElement("h3");
+    degree.textContent=edu[i].degree;
+    child2.appendChild(degree);
+   /*
+    var inter=document.createElement("h3");
+    inter.textContent=edu[i].institute;
+    child2.appendChild(inter);
+
+    var dr=document.createElement("h3");
+    dr.textContent=edu[i].date;
+    child2.appendChild(dr);*/
+    var ul = document.createElement("ul");
+    var li = document.createElement("li");
+    li.textContent=edu[i].institute;
+    ul.appendChild(li);
+    child2.appendChild(ul);
+
+    var li2=document.createElement("li");
+    li2.textContent=edu[i].date;
+    ul.appendChild(li2);
+    child2.appendChild(ul);
+
+  }
+
+
+}
+
+function keyskills(skillinfo)
+{
+  var ed = document.createElement("h2");
+  ed.textContent="Technical skills:";
+  child2.appendChild(ed);
+
+  var hr=document.createElement("hr");
+  child2.appendChild(hr);
+
+  var skilldata=document.createElement("table");
+  skilldata.border="1";
+  child2.appendChild(skilldata);
+
+  tabledata="";
+  for(i=0;i<skillinfo.length;i++)
+  {
+    tabledata+="<tr><td>"+skillinfo[i].title+"</td><td>"+skillinfo[i].info+"</td></tr>";
+  }
+  skilldata.innerHTML = tabledata;
+}
+
+
+
+function achievements(skillinfo)
+{
+  var ed = document.createElement("h2");
+  ed.textContent="Achievements:";
+  child2.appendChild(ed);
+
+  var hr=document.createElement("hr");
+  child2.appendChild(hr);
+
+  var skilldata=document.createElement("table");
+  skilldata.border="1";
+  child2.appendChild(skilldata);
+
+  tabledata="";
+  for(i=0;i<skillinfo.length;i++)
+  {
+    tabledata+="<tr><td>"+skillinfo[i].achname+"</td><td>"+skillinfo[i].ach+"</td></tr>";
+  }
+  skilldata.innerHTML = tabledata;
 }

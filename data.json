@@ -10,5 +10,40 @@
   "career":{
     "careerobj":"Career objective:",
     "info":"A strong career objective is consistently reflected throughout the resume, creating a personal brand and making you stand out. If your career objective is to work in IT, everything from your experience to your education should reflect your IT-related skills and qualifications."
+  },
+  "education":[{
+    "degree":"btech",
+    "institute":"SRKR college",
+    "date":["2016-2020,99.99%"]
+  },
+  {
+    "degree":"inter",
+    "institute":"sri chaitanya college",
+    "date":["2015-2016,98.9%"]
   }
+],
+  "keyskills":[{
+    "title":"Programming languages",
+    "info":["C,C++,java,python,ruby"]
+  },
+  {
+    "title":"operating Systems:",
+    "info":["windows,Linux,MacosX"]
+  },
+  {
+    "title":"Databases",
+    "info":["Oracle,Sql,Mysql"]
+  }
+]
+,
+  "achievements":[
+    {
+    "achname":"Gold medal",
+    "ach":"Wrestling champion"
+    },
+    {
+    "achname":"silver",
+    "ach": "spell bee"
+    }
+]
 }
