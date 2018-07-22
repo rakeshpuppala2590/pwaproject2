@@ -1,4 +1,7 @@
-function Loadjson(file,callback){
+
+
+
+/**function Loadjson(file,callback){
   var x = new XMLHttpRequest();
   x.overrideMimeType("application/json");
   x.open("GET",file,true);
@@ -18,7 +21,34 @@ Loadjson("data.json",function(text){
   education(data.education);
   keyskills(data.keyskills);
   achievements(data.achievements);
+})**/
+
+function loadjson(file){
+  return new Promise((resolve,reject)=>{
+    return fetch(file).then (response=>{
+      if (response.ok) {
+        resolve(response.json());
+      }
+      else {
+        reject(new Error('error'));
+      }
+    })
+  })
+}
+
+var file =loadjson("data.json");
+file.then(data=>{
+  console.log(data);
+  basics(data.details);//sending data from json to function basics
+  career(data.career);
+  education(data.education);
+  keyskills(data.keyskills);
+  achievements(data.achievements);
+
 })
+
+
+
 
 var child1 = document.querySelector(".child1");
 

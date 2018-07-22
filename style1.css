@@ -1,4 +1,56 @@
-.child1{
+.parent{
+  display :flex;
+  width:100%;
+  border: 2px solid lime;
+}
+.left{
+  border:2px solid teal;
+  width:30%;
+  padding:2%;
+  margin:2%;
+  word-wrap: break-word;
+}
+.right{
+  border: 2px solid maroon;
+  width:70%;
+  padding:2%;
+  margin:2%;
+}
+img{
+  border-radius: 50%;
+  border: :1px solid red;
+  width:80%;
+
+}
+hr{
+  background-color: green;
+}
+
+#r{
+  color: red;
+}
+#p{
+  color: green;
+}
+#co{
+  color: skyblue;
+}
+li{
+  color:red;
+  font-size: 15px;
+}
+#in{
+  color: yellow;
+}
+#ls{
+  color: magenta;
+}
+#acg{
+  color: cyan;
+}
+
+
+.left{
   background-color: grey;
   border: 3px solid red;
   padding: 4%;
@@ -8,7 +60,7 @@
   box-decoration-break: slice;
   box-shadow: 8px 12px 28px black;
 }
-.child2{
+.right{
   background-color: #ddd;
   border: 3px solid red;
   padding: 4%;
@@ -24,7 +76,7 @@
   flex-direction: row;
   word-break: break-all;
 }
-img{
+.img{
   border-radius: 50%;
   border: 3px solid orange;
   width:inherit;
@@ -37,7 +89,7 @@ img{
 
 @media only screen and (min-width:481px) and (max-width:768px)  {
 
-  .child1{
+  .left{
     background-color: skyblue;
     border: 3px solid red;
     padding: 4%;
@@ -49,7 +101,7 @@ img{
     word-wrap: break-word;
 
   }
-  .child2{
+  .right{
     background-color: orange;
     border: 3px solid red;
     padding: 4%;
@@ -71,7 +123,7 @@ img{
   .td{
     word-break: break-all;
   }
-  img{
+  .img{
     border-radius: 50%;
     border: 3px solid orange;
     width:50%;
@@ -85,7 +137,7 @@ img{
 
 }
 @media only screen and (min-width:768px) and (max-width:1024px)  {
-  .child1{
+  .left{
     background-color: grey;
     border: 3px solid red;
     padding: 4%;
@@ -97,7 +149,7 @@ img{
     word-wrap: break-word;
 
   }
-  .child2{
+  .right{
     background-color: blue;
     border: 3px solid red;
     padding: 4%;
@@ -114,7 +166,7 @@ img{
     width: inherit;
     flex-direction: row;
   }
-  img{
+  .img{
     border-radius: 50%;
     border: 3px solid orange;
     width:50%;
@@ -126,7 +178,7 @@ img{
   }
 }
 @media only screen and (min-width:360px) and (max-width:480px)  {
-  .child1{
+  .left{
     background-color: green;
     border: 3px solid red;
     padding: 4%;
@@ -139,8 +191,8 @@ img{
     border-radius: 10%;
 
   }
-  .child2{
-    background-color: red;
+  .right{
+    background-color: blue;
     border: 3px solid red;
     padding: 4%;
     margin: 3%;
